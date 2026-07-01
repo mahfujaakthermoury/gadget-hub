@@ -5,14 +5,14 @@
 @plugin "daisyui/theme" {
   name: "light";
   default: true;
-  --color-primary: blue;
+  --color-primary: #163da8;
   --color-secondary: teal;
 }
 @custom-variant dark (&:where([data-theme=night], [data-theme=night] *));
 
   :root {
   --primary: #1951cc;
-  --primary-hover: #173790;
+  --primary-hover: #163da8;
   --secondary: #0f172a;
   --accent: #f59e0b;
 

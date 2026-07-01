@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { div } from "framer-motion/client";
 import { ArrowRight, Eye, Rocket } from "lucide-react";
 
 const AboutPage = () => {
@@ -153,15 +152,15 @@ const AboutPage = () => {
             </section>
 
             {/* 1. Mission & Vision (Bento Grid) */}
-            <section className="space-y-10">
+            <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 ">
                 <div className="text-center space-y-2">
                     <h2 className="text-4xl font-bold text-[#0f172a]">Our Driving Force</h2>
                     <p className="text-xl text-gray-500">Built on the foundation of technical excellence.</p>
                 </div>
 
-                <div className="flex gap-8 mt-5 pt-5">
+                <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
                     {/* Mission Card */}
-                    <div className="p-8 bg-white rounded-3xl border border-gray-100 shadow-sm space-y-4">
+                    <div className="p-8 bg-white rounded-3xl border border-gray-100 shadow-sm  ">
                         <div className="w-12 h-12 bg-[#2563eb]/10 rounded-xl flex items-center justify-center text-[#2563eb]">
                             <Rocket size={24} />
                         </div>
@@ -180,7 +179,7 @@ const AboutPage = () => {
                     {/* Vision Card */}
                     <div
                         style={{ backgroundColor: "#0e46c0" }}
-                        className="rounded-3xl p-8 text-white"
+                        className="relative overflow-hidden rounded-3xl bg-[#0e46c0] p-8 text-white"
                     >
                         <div className="absolute -right-8 -bottom-8 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
                         <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
@@ -194,7 +193,64 @@ const AboutPage = () => {
                     </div>
                 </div>
             </section>
-        </div>  
+
+            <section className="max-w-7xl m-auto mt-20 relative overflow-hidden bg-[#2563eb]/5 rounded-[2rem] p-8 md:p-16 text-center">
+                {/* Decorative Brand Pattern (Abstract Hub Icon) */}
+                <div className="absolute right-[-2rem] top-1/2 -translate-y-1/2 opacity-10 pointer-events-none hidden lg:block">
+                    <svg
+                        width="240"
+                        height="240"
+                        viewBox="0 0 240 240"
+                        fill="none"
+                        stroke="#2563eb"
+                        strokeWidth="8"
+                        className="animate-pulse-slow"
+                    >
+                        <circle cx="120" cy="120" r="24" />
+                        <path d="M120 40v56M120 144v56M40 120h56M144 120h56" strokeLinecap="round" />
+                        <circle cx="120" cy="32" r="12" />
+                        <circle cx="120" cy="208" r="12" />
+                        <circle cx="32" cy="120" r="12" />
+                        <circle cx="208" cy="120" r="12" />
+                    </svg>
+                </div>
+
+                <div className="relative z-10 max-w-2xl mx-auto space-y-6">
+                    <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-[#0f172a]">
+                        Join the Tech Evolution
+                    </h2>
+
+                    <p className="text-lg text-gray-600 leading-relaxed">
+                        Ready to experience the future of gadgets? Sign up for our insider
+                        newsletter and get exclusive access to new releases and precision-engineered updates.
+                    </p>
+
+                    <form
+                        onSubmit={(e) => e.preventDefault()}
+                        className="flex flex-col sm:flex-row gap-4 pt-4"
+                    >
+                        <div className="flex-grow">
+                            <input
+                                type="email"
+                                placeholder="Enter your email"
+                                required
+                                className="w-full h-14 px-6 rounded-xl bg-white border border-gray-200 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-[#2563eb] focus:border-transparent outline-none transition-all shadow-sm"
+                            />
+                        </div>
+
+                        <button
+                            type="submit"
+                            className="h-14 px-8 bg-[#2563eb] text-white rounded-xl font-bold shadow-lg shadow-blue-200 hover:bg-[#1d4ed8] active:scale-95 transition-all whitespace-nowrap"
+                        >
+                            Get Early Access
+                        </button>
+                    </form>
+                </div>
+
+                {/* Decorative Ambient Glow */}
+                <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-[#2563eb]/10 rounded-full blur-3xl pointer-events-none"></div>
+            </section>
+        </div>
     );
 };
 

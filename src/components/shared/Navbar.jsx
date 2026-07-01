@@ -187,7 +187,32 @@ export default function Navbar() {
                 hover:ring-blue-500
                 "
               />
+              <Link
+                href="/login"
+                className="
+                relative
+
+                    font-medium
+                    text-slate-700
+
+                    transition
+
+                    after:absolute
+                    after:left-0
+                    after:-bottom-2
+                    after:h-[2px]
+                    after:w-0
+                    after:bg-blue-600
+                    after:transition-all
+
+                    hover:text-blue-600
+                    hover:after:w-full
+                "
+              >
+                Login
+              </Link>
             </div>
+
           </nav>
         </div>
       </header>

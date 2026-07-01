@@ -62,16 +62,16 @@ export default function RegisterForm() {
   };
 
   return (
-    <div className="w-full max-w-[480px] bg-white rounded-2xl shadow-[0_8px_30px_rgb(15,23,42,0.08)] overflow-hidden z-10 transition-all duration-300">
+    <div className="w-full max-w-[480px] m-auto mt-30 bg-white rounded-2xl shadow-[0_8px_30px_rgb(15,23,42,0.08)] overflow-hidden z-10 transition-all duration-300">
       <div className="p-stack-lg md:p-12">
         {/* Heading */}
 
         <div className="text-center mb-stack-lg">
-          <h2 className="font-headline-md text-headline-md text-primary mb-2">
+          <h2 className="text-2xl font-extrabold tracking-tight text-blue-800 md:text-4xl lg:text-5xl pb-2">
             Create Account
           </h2>
 
-          <p className="text-on-surface-variant font-body-md">
+          <p className="text-on-surface-variant font-body-md mb-5">
             Join the hub of precision-engineered gadgets.
           </p>
         </div>
@@ -109,7 +109,7 @@ export default function RegisterForm() {
                     name: e.target.value,
                   })
                 }
-                className="w-full pl-12 pr-4 py-3.5 bg-surface-container-low border-2 border-transparent rounded-xl font-body-md text-on-surface placeholder:text-outline-variant focus:bg-white focus:border-primary transition-all duration-300"
+                className="bg-blue-300/20 w-full pl-12 pr-4 py-3.5 bg-surface-container-low border-2 border-transparent rounded-xl font-body-md text-on-surface placeholder:text-outline-variant focus:bg-white focus:border-primary transition-all duration-300"
               />
             </div>
           </div>
@@ -141,7 +141,7 @@ export default function RegisterForm() {
                     email: e.target.value,
                   })
                 }
-                className="w-full pl-12 pr-4 py-3.5 bg-surface-container-low border-2 border-transparent rounded-xl font-body-md text-on-surface placeholder:text-outline-variant focus:bg-white focus:border-primary transition-all duration-300"
+                className="bg-blue-300/20 w-full pl-12 pr-4 py-3.5 bg-surface-container-low border-2 border-transparent rounded-xl font-body-md text-on-surface placeholder:text-outline-variant focus:bg-white focus:border-primary transition-all duration-300"
               />
             </div>
           </div>
@@ -174,7 +174,7 @@ export default function RegisterForm() {
                     password: e.target.value,
                   })
                 }
-                className="w-full pl-12 pr-12 py-3.5 bg-surface-container-low border-2 border-transparent rounded-xl font-body-md text-on-surface placeholder:text-outline-variant focus:bg-white focus:border-primary transition-all duration-300"
+                className="bg-blue-300/20 w-full pl-12 pr-12 py-3.5 bg-surface-container-low border-2 border-transparent rounded-xl font-body-md text-on-surface placeholder:text-outline-variant focus:bg-white focus:border-primary transition-all duration-300"
               />
 
               <button
@@ -233,11 +233,10 @@ export default function RegisterForm() {
                     confirmPassword: e.target.value,
                   })
                 }
-                className={`w-full pl-12 pr-4 py-3.5 bg-surface-container-low border-2 rounded-xl font-body-md text-on-surface placeholder:text-outline-variant focus:bg-white focus:border-primary transition-all duration-300 ${
-                  passwordMismatch
+                className={`bg-blue-300/20 w-full pl-12 pr-4 py-3.5 bg-surface-container-low border-2 rounded-xl font-body-md text-on-surface placeholder:text-outline-variant focus:bg-white focus:border-primary transition-all duration-300 ${passwordMismatch
                     ? "border-error"
                     : "border-transparent"
-                }`}
+                  }`}
               />
             </div>
           </div>
@@ -286,11 +285,10 @@ export default function RegisterForm() {
           <button
             type="submit"
             disabled={loading}
-            className={`mt-4 w-full py-4 text-white font-label-md text-label-md rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group active:scale-95 ${
-              success
+            className={`mt-4 w-full py-4 text-white font-bold font-label-md text-label-md rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group active:scale-95 ${success
                 ? "bg-primary-container"
                 : "bg-primary hover:bg-primary/90 hover:scale-[1.01] shadow-primary/20"
-            }`}
+              }`}
           >
             {loading ? (
               <>

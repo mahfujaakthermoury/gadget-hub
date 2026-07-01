@@ -42,11 +42,11 @@ export default function LoginForm() {
   };
 
   return (
-    <main className="flex-grow flex items-center justify-center px-margin-mobile md:px-margin-desktop py-stack-lg relative z-10">
-      <div className="w-full max-w-[480px] glass-card rounded-2xl p-stack-lg shadow-2xl flex flex-col gap-stack-lg">
+    <main className="flex-grow mt-30 flex items-center justify-center px-margin-mobile md:px-margin-desktop py-stack-lg relative z-10">
+      <div className="w-full max-w-[480px] bg-white p-10 glass-card rounded-2xl p-stack-lg shadow-2xl flex flex-col gap-stack-lg">
         {/* Brand */}
-        <div className="text-center">
-          <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tighter mb-2">
+        <div className="text-center pb-8">
+          <h1 className="text-2xl font-extrabold tracking-tight text-blue-800 md:text-4xl lg:text-5xl pb-5">
             GadgetHub
           </h1>
 
@@ -63,10 +63,10 @@ export default function LoginForm() {
         >
           {/* Email */}
 
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 pb-5">
             <label
               htmlFor="email"
-              className="font-label-md text-label-md text-on-surface-variant px-1"
+              className="font-label-md  text-label-md text-on-surface-variant px-1"
             >
               Email Address
             </label>
@@ -86,7 +86,7 @@ export default function LoginForm() {
                   setEmail(e.target.value);
                   setEmailError(false);
                 }}
-                className="w-full pl-12 pr-4 py-4 bg-surface-container-low border-none rounded-xl font-body-md focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none"
+                className="w-full pl-12 bg-blue-300/20 pr-4 py-4 bg-surface-container-low border-none rounded-xl font-body-md focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none"
               />
             </div>
 
@@ -122,7 +122,7 @@ export default function LoginForm() {
                   setPassword(e.target.value);
                   setPasswordError(false);
                 }}
-                className="w-full pl-12 pr-12 py-4 bg-surface-container-low border-none rounded-xl font-body-md focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none"
+                className="w-full pl-12 bg-blue-300/20 pr-12 py-4 bg-surface-container-low border-none rounded-xl font-body-md focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none"
               />
 
               <button
@@ -147,7 +147,7 @@ export default function LoginForm() {
 
               <a
                 href="#"
-                className="text-primary font-label-sm text-label-sm hover:underline ml-auto"
+                className="text-primary font-label-sm text-label-sm hover:underline ml-auto mb-5"
               >
                 Forgot Password?
               </a>
@@ -160,7 +160,8 @@ export default function LoginForm() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-4 bg-primary text-on-primary font-label-md text-label-md rounded-xl shadow-lg hover:shadow-primary/20 hover:bg-primary/90 transition-all duration-300 active:scale-95 flex items-center justify-center gap-2 disabled:opacity-80 disabled:cursor-not-allowed"
+              className="w-full py-4 bg-primary text-white font-bold font-label-md text-label-md rounded-xl shadow-lg 
+              hover:shadow-primary/20 hover:bg-primary/90 transition-all duration-300 active:scale-95 flex items-center justify-center gap-2 disabled:opacity-80 disabled:cursor-not-allowed"
             >
               {loading ? (
                 <>
@@ -226,7 +227,7 @@ export default function LoginForm() {
           <p className="font-body-md text-on-surface-variant">
             Do not have an account?{" "}
             <a
-              href="#"
+              href="/registration"
               className="text-primary font-bold hover:underline"
             >
               Register

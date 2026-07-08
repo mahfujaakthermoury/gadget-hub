@@ -1,36 +1,176 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛒 GadgetHub
 
-## Getting Started
+A modern and responsive tech product showcase application built with **Next.js (App Router)** and **Firebase Authentication**. Users can browse gadgets, search and filter products, view product details, and securely access protected pages to add and manage products.
 
-First, run the development server:
+---
+
+## 🚀 Live Demo
+
+**Live Website:** https://gadget-hub-bd.vercel.app
+
+## 📂 GitHub Repository
+
+**Repository:** https://github.com/mahfujaakthermoury/gadget-hub-bd
+
+---
+
+## 📖 Project Overview
+
+GadgetHub is a simple inventory and product showcase application designed to demonstrate modern frontend development using Next.js. It includes authentication, protected routes, dynamic routing, search and filtering, responsive layouts, and local storage for managing products.
+
+---
+
+## ✨ Key Features
+
+* Responsive and modern user interface
+* Firebase Email & Password Authentication
+* Optional Google Sign-In
+* Protected Routes
+* Dynamic Product Details Page
+* Search Products by Title
+* Filter Products by Category and Price
+* Add New Products (Protected)
+* Manage Products (Protected)
+* Delete Products
+* Smooth Animations with Framer Motion
+* Mobile, Tablet, and Desktop Responsive
+
+---
+
+## 🛠️ Technologies Used
+
+* Next.js (App Router)
+* React
+* Tailwind CSS
+* Firebase Authentication
+* Context API
+* Framer Motion
+* React Icons
+* Sonner (Toast Notifications)
+* Local Storage
+
+---
+
+## 📁 Project Structure
+
+```text
+src
+│
+├── app
+│   ├── about
+│   ├── items
+│   │   ├── add
+│   │   ├── manage
+│   │   └── [id]
+│   ├── login
+│   ├── register
+│   ├── layout.js
+│   └── page.js
+│
+├── components
+├── context
+├── firebase
+├── hooks
+├── lib
+└── utils
+```
+
+---
+
+## 🗂️ Route Summary
+
+| Route           | Description     | Access    |
+| --------------- | --------------- | --------- |
+| `/`             | Landing Page    | Public    |
+| `/items`        | Browse Products | Public    |
+| `/items/[id]`   | Product Details | Public    |
+| `/about`        | About Page      | Public    |
+| `/login`        | Login           | Public    |
+| `/register`     | Register        | Public    |
+| `/items/add`    | Add Product     | Protected |
+| `/items/manage` | Manage Products | Protected |
+
+---
+
+## 🔐 Authentication
+
+Firebase Authentication is used for:
+
+* Email & Password Registration
+* Email & Password Login
+* Google Login (Optional)
+* User Authentication State
+* Protected Routes
+
+---
+
+## 📦 Installation & Setup
+
+### Clone the repository
+
+```bash
+git clone https://github.com/mahfujaakthermoury/gadget-hub-bd.git
+```
+
+### Navigate to the project
+
+```bash
+cd gadget-hub-bd
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Create a `.env.local` file
+
+```env
+NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+```
+
+### Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🎯 Future Improvements
 
-To learn more about Next.js, take a look at the following resources:
+* Backend Integration
+* Product Editing
+* Wishlist
+* Shopping Cart
+* Dark Mode
+* Pagination
+* Product Reviews
+* Admin Dashboard
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 👩‍💻 Developer
 
-## Deploy on Vercel
+**Mahfuja Akther**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* GitHub: https://github.com/mahfujaakthermoury
+* Portfolio: https://mahfujaakther.netlify.app
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📄 License
+
+This project is created for learning purposes and academic assignment.
